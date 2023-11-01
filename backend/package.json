@@ -1,13 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "siminsBackendBranch",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "nodemon ./src/server.js"
   },
-  "author": "",
+  "author": "Simin",
   "license": "ISC",
   "dependencies": {
     "ajv": "^8.12.0",
