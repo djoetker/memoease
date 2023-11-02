@@ -51,23 +51,23 @@ export { User, Group };
 
 // User
 // Register
-export async function registerUser(userData) {
+export async function createUser(userData) {
   const newUser = new User(userData);
   return newUser.save();
 }
 
 // Login
-export async function loginUser(email) {
+export async function getUserByEmail(email) {
   return User.findOne({ email });
 }
 
 // Update
-export async function updateUser(userId, newData) {
+export async function updateUserById(userId, newData) {
   return User.findByIdAndUpdate(userId, newData, { new: true });
 }
 
 // Delete User
-export async function deleteUser(userId) {
+export async function deleteUserById(userId) {
   return User.findByIdAndDelete(userId);
 }
 
@@ -79,14 +79,14 @@ export async function createGroup(groupData) {
 }
 
 // Create Group with Members
-export async function createGroupWithMembers(groupData, memberIds) {
+export async function createGroupWithMemberIds(groupData, memberIds) {
   const newGroup = new Group(groupData);
   newGroup.members = memberIds;
   return newGroup.save();
 }
 
 // Update Group
-export async function updateGroup(groupId, updatedGroupData) {
+export async function updateGroupById(groupId, updatedGroupData) {
   const updatedGroup = await Group.findByIdAndUpdate(
     groupId,
     updatedGroupData,
@@ -96,6 +96,6 @@ export async function updateGroup(groupId, updatedGroupData) {
 }
 
 // Delete Group
-export async function deleteGroup(groupId) {
+export async function deleteGroupById(groupId) {
   return Group.findByIdAndDelete(groupId);
 }
