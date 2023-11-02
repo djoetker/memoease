@@ -18,13 +18,13 @@ const Navigation = () => {
         <NavLink className="navList" to="/contact">
           Contact
         </NavLink>
-        {/*  btn-Head  zum  Einlogin und Register  */}
+        {/*  btn-Head  zum  Einlogin und Register  ----------- */}
         <div className="btn-Head">
           <NavLink className="einlogin" to="/einlogin  ">
             Einlogin
           </NavLink>
 
-          <NavLink className="register" to="/einlogin  ">
+          <NavLink className="register" to="/register  ">
             Register
           </NavLink>
         </div>
