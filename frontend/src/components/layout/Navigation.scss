@@ -39,9 +39,9 @@
       transform: scaleX(1); /* Linie wird sichtbar bei Hover */
     }
   }
-
+//     einlogin  Register
   .btn-Head {
-    button {
+    .einlogin, .register {
       margin: 0 1rem;
       background: #387373;
       color: white;
@@ -49,6 +49,7 @@
       font-size: 0.8rem;
       outline: none;
       border: none;
+      text-decoration: none;
       box-shadow: 0px 0px 0.8px #000;
       padding: 0.3rem 1rem;
     
