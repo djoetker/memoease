@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Navigation.scss";
+import { Outlet } from "react-router-dom";
+import "../../css/Navigation.scss";
 const Navigation = () => {
   return (
     <div>
@@ -20,10 +21,12 @@ const Navigation = () => {
         </NavLink>
 
         <div className="btn-Head">
-          <button>Einlogin</button>
-          <button>Register</button>
+          <NavLink className="btnLoginin">Einlogin</NavLink>
+          <NavLink className="btnRegister">Register</NavLink>
         </div>
       </div>
+      {/* Outlet zeigt den Inhalt der gerenderten Route an */}
+      <Outlet />
     </div>
   );
 };

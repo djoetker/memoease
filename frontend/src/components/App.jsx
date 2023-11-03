@@ -1,14 +1,21 @@
 import "../css/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./layout/Navigation";
-import Container from "./HomePage/Container";
+import About from "./About/About";
+import { Contact } from "./Contact/Contact";
+import Home from "./Home/Home";
+import HomePage from "./HomePage/HomePage";
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigation />
         <Routes>
-          <Route path="/" element={<Container />} />
+          <Route element={<Navigation />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/home" element={<Home />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
