@@ -5,6 +5,8 @@ import About from "./About/About";
 import { Contact } from "./Contact/Contact";
 import Home from "./Home/Home";
 import HomePage from "./HomePage/HomePage";
+import Login from "./Login_/Login";
+import Register from "./Register/Register";
 function App() {
   return (
     <>
@@ -12,9 +14,11 @@ function App() {
         <Routes>
           <Route element={<Navigation />}>
             <Route path="/" element={<HomePage />} />
-            <Route path="/About" element={<About />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Route>
         </Routes>
       </BrowserRouter>

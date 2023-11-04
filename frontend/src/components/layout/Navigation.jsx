@@ -21,8 +21,12 @@ const Navigation = () => {
         </NavLink>
 
         <div className="btn-Head">
-          <NavLink className="btnLoginin">Einlogin</NavLink>
-          <NavLink className="btnRegister">Register</NavLink>
+          <NavLink to="login" className="btnLoginin">
+            Einlogin
+          </NavLink>
+          <NavLink to="register" className="btnRegister">
+            Register
+          </NavLink>
         </div>
       </div>
       {/* Outlet zeigt den Inhalt der gerenderten Route an */}
