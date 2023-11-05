@@ -1,11 +1,17 @@
 import dotenv from "dotenv";
 import express from "express";
-import { connectToDb } from "./service/db.js";
+import cookieParser from "cookie-parser";
 import cors from "cors";
 dotenv.config();
 
+import { connectToDb } from "./service/db.js";
+import userRouter from "./routes/user.routes.js";
+import groupRouter from "./routes/group.routes.js";
+
 const app = express();
+
 app.use(express.json());
+app.use(cookieParser());
 const corsOptions = {
   origin: "http://localhost:5173",
   credentials: true,
@@ -15,6 +21,9 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 await connectToDb();
+
+app.use("/user", userRouter);
+app.use("/group", groupRouter);
 
 //404 error handler
 app.all("*", (req, res, next) => {
