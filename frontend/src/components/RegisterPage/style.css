@@ -1,0 +1,187 @@
+.register {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .register .overlap-group-wrapper {
+    background-color: #ffffff;
+    height: 832px;
+    width: 1280px;
+  }
+  
+  .register .overlap-group {
+    background-color:#387373;
+    border-radius: 46px;
+    box-shadow: 4px 6px 4px #00000040;
+    height: 832px;
+    position: relative;
+  }
+  
+  .register .overlap {
+    height: 540px;
+    left: 442px;
+    position: absolute;
+    top: 231px;
+    width: 372px;
+  }
+  
+  .register .login {
+    height: 540px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 372px;
+  }
+  
+  .register .rectangle {
+    background-color:#E4F2E7;
+    border-radius: 56px;
+    box-shadow: 5px 6px 4px #00000040;
+    height: 443px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .register .or-log-in {
+    color: #e4f2e7;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 472px;
+    width: 370px;
+  }
+  
+  .register .text-wrapper {
+    color: #e4f2e7;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  
+  .register .span {
+    font-family: "Inter-Light", Helvetica;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+  
+  .register .group {
+    height: 87px;
+    left: 20px;
+    position: absolute;
+    top: 20px;
+    width: 335px;
+  }
+  
+  .register .div {
+    color: #000000;
+    font-family: "Inter-Light", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    left: 3px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 330px;
+  }
+  
+  .register .rectangle-2 {
+    background-color: #d9d9d9;
+    border-radius: 49px;
+    height: 53px;
+    left: 0;
+    position: absolute;
+    top: 34px;
+    width: 330px;
+  }
+  
+  .register .group-2 {
+    height: 87px;
+    left: 23px;
+    position: absolute;
+    top: 132px;
+    width: 335px;
+  }
+  
+  .register .group-3 {
+    height: 87px;
+    left: 20px;
+    position: absolute;
+    top: 243px;
+    width: 335px;
+  }
+  
+  .register .btn-login {
+    height: 74px;
+    left: 115px;
+    position: absolute;
+    top: 352px;
+    width: 140px;
+  }
+  
+  .register .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Inter-Light", Helvetica;
+    font-size: 48px;
+    font-weight: 300;
+    left: 433px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 133px;
+    width: 379px;
+  }
+  .label .text-wrapper {
+    color: #000000;
+    font-family: "Inter-Light", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    height: 66px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 132px;
+  }
+  .register .btn-login {
+    height: 53px; /* Match the height of the input fields */
+    width: 330px; /* Match the width of the input fields */
+    background-color: #d9d9d9; /* Match the background color of the input fields */
+    border-radius: 49px; /* Match the border radius of the input fields */
+    color: #000000; /* Text color */
+    font-family: "Inter-Light", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 53px;
+    position: absolute;
+    top: 352px;
+    left: 20px; /* Adjust left position to align with the input fields */
+    box-shadow: 5px 6px 4px #00000040; /* Match the input fields' box shadow */
+  }
+  .rectangle-2 {
+text-align: center;
+font-size: 1.2em;
+
+
+  }
+
+  /*  */
+  
+  

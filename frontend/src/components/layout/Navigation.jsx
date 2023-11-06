@@ -20,8 +20,13 @@ const Navigation = () => {
         </NavLink>
 
         <div className="btn-Head">
-          <button>Einlogin</button>
-          <button>Register</button>
+          <NavLink className="navList" to="/einlogin">
+            <button>Einlogin</button>
+          </NavLink>
+
+          <NavLink className="navList" to="/register">
+            <button>Register</button>
+          </NavLink>
         </div>
       </div>
     </div>
