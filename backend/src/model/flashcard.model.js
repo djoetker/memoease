@@ -13,10 +13,6 @@ const flashcardSchema = new Schema({
         type: String,
         default: "Vocabularies"
     },
-    isLearned: {
-        type: Boolean,
-        default: false
-    },
     createdBy: {
         type: Schema.Types.ObjectId,
         ref: "User"
