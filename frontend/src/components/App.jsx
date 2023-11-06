@@ -1,12 +1,13 @@
 import "../css/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./layout/Navigation";
+
 import About from "./About/About";
-import { Contact } from "./Contact/Contact";
-import Home from "./Home/Home";
+import Contact from "./Contact/Contact";
 import HomePage from "./HomePage/HomePage";
 import Login from "./Login_/Login";
 import Register from "./Register/Register";
+
 function App() {
   return (
     <>
@@ -16,7 +17,6 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Route>
