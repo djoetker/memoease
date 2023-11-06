@@ -27,75 +27,34 @@ const userSchema = new Schema({
   ],
 });
 
-// Group model for creating groups to share content privately.
-const groupSchema = new Schema({
-  name: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  members: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "User",
-    },
-  ],
-});
-
 const User = model("User", userSchema);
-const Group = model("Group", groupSchema);
 
-export { User, Group };
+export default User;
 
 // Database communication separate from business logic, which is defined in controllers.
 
 // User
 // Register
-export async function registerUser(userData) {
+export async function createUser(userData) {
   const newUser = new User(userData);
   return newUser.save();
 }
 
 // Login
-export async function loginUser(email) {
+export async function getUserByEmail(email) {
   return User.findOne({ email });
 }
 
+export async function getUserById(userId) {
+  return User.findById(userId);
+}
+
 // Update
-export async function updateUser(userId, newData) {
+export async function updateUserById(userId, newData) {
   return User.findByIdAndUpdate(userId, newData, { new: true });
 }
 
 // Delete User
-export async function deleteUser(userId) {
+export async function deleteUserById(userId) {
   return User.findByIdAndDelete(userId);
-}
-
-// Group
-// Create Group
-export async function createGroup(groupData) {
-  const newGroup = new Group(groupData);
-  return newGroup.save();
-}
-
-// Create Group with Members
-export async function createGroupWithMembers(groupData, memberIds) {
-  const newGroup = new Group(groupData);
-  newGroup.members = memberIds;
-  return newGroup.save();
-}
-
-// Update Group
-export async function updateGroup(groupId, updatedGroupData) {
-  const updatedGroup = await Group.findByIdAndUpdate(
-    groupId,
-    updatedGroupData,
-    { new: true }
-  );
-  return updatedGroup;
-}
-
-// Delete Group
-export async function deleteGroup(groupId) {
-  return Group.findByIdAndDelete(groupId);
 }

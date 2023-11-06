@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
 import { Outlet } from "react-router-dom";
 import "../../css/Navigation.scss";
+
 const Navigation = () => {
   return (
     <div>
@@ -21,6 +23,7 @@ const Navigation = () => {
         </NavLink>
 
         <div className="btn-Head">
+
           <NavLink to="login" className="btnLoginin">
             Einlogin
           </NavLink>
@@ -31,6 +34,7 @@ const Navigation = () => {
       </div>
       {/* Outlet zeigt den Inhalt der gerenderten Route an */}
       <Outlet />
+
     </div>
   );
 };
