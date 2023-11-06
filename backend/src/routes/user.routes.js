@@ -1,5 +1,6 @@
 import { Router } from "express";
 
+
 import * as UserController from "../controller/user.controller.js";
 import { requireAuth } from "../middleware/validateToken.js";
 import { validateEmail, validateId } from "../middleware/ajvValidation.js";
@@ -16,3 +17,6 @@ userRouter.patch("/:id", validateId, requireAuth, UserController.updateUser);
 userRouter.delete("/:id", validateId, requireAuth, UserController.deleteUser);
 
 export default userRouter;
+
+
+
