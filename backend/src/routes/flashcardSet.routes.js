@@ -10,6 +10,8 @@ router.post("/:setId", requireAuth, FlashcardSetController.postNewCard);
 router.get("/", requireAuth, FlashcardSetController.getSetsByUser);
 router.get("/:setId", requireAuth, FlashcardSetController.getOneSetBySetId);
 router.put("/:setId", requireAuth, FlashcardSetController.updateSetInfo);
+router.get("/public/random", FlashcardSetController.getRandomPublicSets);
+
 
 
 

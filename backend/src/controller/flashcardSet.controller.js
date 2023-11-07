@@ -1,14 +1,12 @@
 import { createNewCard } from "../model/flashcard.model.js";
-import { createNewSet, getSetBySetId, getSetsByUserId, updateSetBySetId } from "../model/flashcardSet.model.js";
+import { createNewSet, findPublicSets, getSetBySetId, getSetsByUserId, updateSetBySetId } from "../model/flashcardSet.model.js";
 
 
 export async function postNewSet(req, res) {
     try {
-        const { title, description } = req.body;
         const userId = req.user.id;
         const newEntry = {
-            title,
-            description,
+            ...req.body,
             createdBy: userId,
         };
 
@@ -74,6 +72,16 @@ export async function updateSetInfo(req, res) {
     try {
         const updatedSet = await updateSetBySetId(setId, data);
         res.status(200).send(updatedSet);
+    } catch (error) {
+        console.error(error);
+        res.status(500).end();
+    };
+};
+
+export async function getRandomPublicSets(req, res) {
+    try {
+        const publicSets = await findPublicSets();
+        res.status(200).send(publicSets);
     } catch (error) {
         console.error(error);
         res.status(500).end();

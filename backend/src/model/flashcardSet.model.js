@@ -52,3 +52,10 @@ export async function updateSetBySetId(setId, data) {
     return updatedSet;
 };
 
+export async function findPublicSets() {
+    const publicSets = await FlashcardSet.aggregate([
+        { $match: { isPublic: true } },
+        { $sample: { size: 6 } }
+    ]);
+    return publicSets;
+};
