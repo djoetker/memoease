@@ -17,7 +17,7 @@ const EditSet = () => {
             <input type="text" placeholder="words" />
             <input type="text" placeholder="worte" />
             <button className="EditBtn" type="submit">
-              Submit
+              Edit
             </button>
           </div>
         </form>
