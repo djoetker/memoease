@@ -21,7 +21,7 @@ const Login = () => {
               </label>
             </div>
             <div className="login_btn">
-              <button type="submit">Login in</button>
+              <button type="submit">Login</button>
             </div>
           </form>
         </div>

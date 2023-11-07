@@ -8,6 +8,7 @@ import HomePage from "./HomePage/HomePage";
 import Login from "./Login_/Login";
 import Register from "./Register/Register";
 import Home from "./Home/Home";
+import Error from "./Error/Error";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Route>
+          <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </>

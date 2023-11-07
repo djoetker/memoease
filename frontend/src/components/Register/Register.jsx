@@ -28,14 +28,14 @@ const Register = () => {
               </label>
             </div>
             <div className="Register_btn">
-              <button type="submit">Login in</button>
+              <button type="submit">Register</button>
             </div>
           </form>
         </div>
         <div className="login_link">
           <p>or</p>
           <NavLink className="toLoginLink" to="/login">
-            Login{" "}
+            Login
           </NavLink>
         </div>
       </div>
