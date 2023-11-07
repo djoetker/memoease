@@ -1,52 +1,43 @@
 import React from "react";
 import "../../css/register.scss";
 import { NavLink } from "react-router-dom";
+
 const Register = () => {
   return (
-    <div className="container">
-      <h2>Register</h2>
-      <div className="Form_container">
-        <form className="form">
-          <div>
-            <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              // placeholder="Enter your email..."
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              // placeholder="Enter your username..."
-              required
-            />
-          </div>
-
-          <div>
-            <label htmlFor="password">Passowrd</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              // placeholder="Enter your password..."
-              required
-            />
-          </div>
-
-          <div className="btnRegister">
-            <button type="submit">Register</button>
-          </div>
-        </form>
-      </div>
-      <div className="or_log_in">
-        <p> or </p>
-        <NavLink to=""> log in</NavLink>
+    <div>
+      <div className="register_container">
+        <h1 className="title">Register</h1>
+        <div className="register-form">
+          <form action="">
+            <div className="">
+              <label htmlFor="username">
+                Username:
+                <input type="text" name="username" id="username" required />
+              </label>
+            </div>
+            <div className="">
+              <label htmlFor="email">
+                Email:
+                <input type="email" name="email" id="email" required />
+              </label>
+            </div>
+            <div className="">
+              <label htmlFor="password">
+                Password:
+                <input type="password" name="password" id="password" required />
+              </label>
+            </div>
+            <div className="Register_btn">
+              <button type="submit">Register</button>
+            </div>
+          </form>
+        </div>
+        <div className="login_link">
+          <p>or</p>
+          <NavLink className="toLoginLink" to="/login">
+            Login
+          </NavLink>
+        </div>
       </div>
     </div>
   );
