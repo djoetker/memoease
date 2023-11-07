@@ -11,6 +11,7 @@ import Home from "./Home/Home";
 import Error from "./Error/Error";
 import { Box } from "./createSet/createSet";
 import HomeLoggedIn from "./homeLoggedIn/HomeLoggedIn";
+import EditSet from "./Edit-set/EditSet";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/create" element={<Box />} />
             <Route path="/home" element={<HomeLoggedIn />} />
+            <Route path="/editSet" element={<EditSet />} />
           </Route>
           <Route path="*" element={<Error />} />
         </Routes>
