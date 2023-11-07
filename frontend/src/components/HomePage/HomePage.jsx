@@ -20,7 +20,7 @@ const HomePage = () => {
         <div className="getStartlink-content">
           <div className="startCrad">
             <div className="blockStart">
-              <NavLink to="" className="startLinkCard">
+              <NavLink to="/" className="startLinkCard">
                 Get Started
               </NavLink>
             </div>

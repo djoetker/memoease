@@ -1,86 +1,83 @@
 $backgroundGreen: #387373;
-$text-transform: capitalize;
-$padding-top-btn: 1.5rem;
-$padding: 1rem;
-$paddingAll: 2rem;
-$border-radius: 2rem;
-$overflow: auto;
-$WhiteColor: #eee;
+$BlackWhiteColor: #eee;
+$WhitColor: #fff;
 $ColorBlack: #000000;
+$colorPrimary: #4caf50; // green
+$colorSecondary: #ff6f61; // red
+$colorGrau: #4d4d4dcc;
+$boxShadow: 0px 0px 10px #0000;
 
-.container {
-  background-color: $backgroundGreen;
-  border-radius: 3.3rem;
+.register_container {
+  background: $backgroundGreen;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  font-family:sans-serif;
-  h2{
-    text-align: center;
-    padding-top: 3rem;
-    color: #fff;
+  margin: 0 auto;
+  height: 80vh;
+  border-radius: 3.3rem;
+  .title {
+    color: $WhitColor;
+    font-weight: normal;
+    text-shadow: 0px 0px 0.3px $WhitColor;
   }
-  .Form_container {
-    width: 100%;
-    height: 50vh;
+  .register-form {
+    width: 300px;
+    height: 340px;
+    background: #e4f2e7;
     display: flex;
     justify-content: center;
     align-items: center;
-    .form {
-      background-color: #e4f2e7;
-      padding: 1rem;
-      margin: 0 auto;
-      width: 330px;
-      margin: 0 auto;
-      border-radius: 3.3rem;
-      box-shadow: 0px 0px 10px rgb(5, 5, 5);
+    margin: 1rem auto;
+    border-radius: 3rem;
+    text-align: center;
+    box-shadow: $boxShadow;
+    form {
+      width: 240px;
+      display: flex;
+      flex-direction: column;
       label {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0.3rem 0;
-        opacity: 0.5;
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 4px 0;
+        font-size: 1.1rem;
+        color: $colorGrau;
       }
       input {
         width: 100%;
-        margin: 0.4rem 0;
-        margin-bottom: 0.5em;
-        padding: 0.6rem;
-        border-radius: 1rem;
+        padding: 0.6rem 0;
+        border-radius: 2rem;
+        outline: none;
+        border: none;
+        background-color: #cccc;
+        padding-left: 1rem;
+      }
+    }
+    .Register_btn {
+      button {
+        cursor: pointer;
+        width: 100px;
+        padding: 0.8rem 0;
+        border-radius: 2rem;
         border: none;
         outline: none;
-        background-color: #cccc;
-      }
-      .btnRegister {
-        display: flex;
-        justify-content: center;
-        margin: 1rem 0;
-        button {
-          width: 40%;
-          padding: 1rem;
-          border-radius: 2rem;
-          transition: all 0.8s ease;
-          margin: 0 0.3rem;
-          border: none;
-          background-color: #cccc;
-          opacity: 0.5;
-          box-shadow: 0px 0px 10px rgb(5, 5, 5);
-          &:hover {
-            background-color: #9d9797;
-          }
+        color: #000000;
+        transition: all 0.9s ease;
+        background: #cccc;
+        &:hover {
+          background-color: #9d9797;
         }
       }
     }
   }
-  .or_log_in {
+  .login_link {
+    cursor: pointer;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 8rem;
-    color: #fff;
-    .active{
-        color: #fff;
-        padding-left:0.41rem;
+    color: $WhitColor;
+    .toLoginLink {
+      color: $WhitColor;
+      padding-left: 0.4rem;
     }
   }
 }
