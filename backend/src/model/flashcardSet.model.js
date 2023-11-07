@@ -38,12 +38,17 @@ export async function getSetsByUserId(userId) {
 };
 
 export async function getSetBySetId(setId) {
-    const set = await FlashcardSet.findOne({ _id: setId });
+    const set = await FlashcardSet.findOne({ _id: setId }).populate("flashcards");
     return set;
 };
 
 export async function getPublicSets() {
     const publicSets = await FlashcardSet.find({ isPublic: true });
     return publicSets;
+};
+
+export async function updateSetBySetId(setId, data) {
+    const updatedSet = await FlashcardSet.findByIdAndUpdate(setId, data, { new: true });
+    return updatedSet;
 };
 

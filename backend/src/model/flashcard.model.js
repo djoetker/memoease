@@ -9,10 +9,6 @@ const flashcardSchema = new Schema({
         type: String,
         required: true
     },
-    category: {
-        type: String,
-        default: "Vocabularies"
-    },
     createdBy: {
         type: Schema.Types.ObjectId,
         ref: "User"
