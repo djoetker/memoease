@@ -9,7 +9,6 @@ export const requireAuth = (req, res, next) => {
     // Verify and decode the JWT token
     // The decoded token (decoded) now contains the user data encoded in the payload.
     const decoded = jwt.verify(authToken, process.env.JWT_SECRET);
-
     // Add user data from the token to the request
     req.user = decoded;
 

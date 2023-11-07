@@ -6,6 +6,10 @@ import * as FlashcardSetController from "../controller/flashcardSet.controller.j
 const router = Router();
 
 router.post("/", requireAuth, FlashcardSetController.postNewSet);
+router.post("/:setId", requireAuth, FlashcardSetController.postNewCard);
+router.get("/", requireAuth, FlashcardSetController.getSetsByUser);
+
+
 
 
 export default router;
