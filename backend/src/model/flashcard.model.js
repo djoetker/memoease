@@ -25,3 +25,7 @@ export async function createNewCard(data) {
     return entry;
 };
 
+export async function deleteCardByCardId(cardId) {
+    const response = Flashcard.deleteOne({ _id: cardId });
+    return response;
+};

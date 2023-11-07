@@ -6,7 +6,8 @@ import * as FlashcardSetController from "../controller/flashcardSet.controller.j
 const router = Router();
 
 router.post("/", requireAuth, FlashcardSetController.postNewSet);
-router.post("/:setId", requireAuth, FlashcardSetController.postNewCard);
+router.post("/card/:setId", requireAuth, FlashcardSetController.postNewCard);
+router.delete("/card/:cardId", requireAuth, FlashcardSetController.deleteCard);
 router.get("/", requireAuth, FlashcardSetController.getSetsByUser);
 router.get("/:setId", requireAuth, FlashcardSetController.getOneSetBySetId);
 router.put("/:setId", requireAuth, FlashcardSetController.updateSetInfo);

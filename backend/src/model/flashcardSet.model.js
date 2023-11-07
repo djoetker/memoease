@@ -41,6 +41,10 @@ export async function getSetBySetId(setId) {
     const set = await FlashcardSet.findOne({ _id: setId }).populate("flashcards");
     return set;
 };
+export async function deleteCardFromSet(cardId) {
+    const set = await FlashcardSet.findOneAndUpdate({ flashcards: cardId }, { $pull: { flashcards: cardId } }, { new: true });
+    return set;
+};
 
 export async function getPublicSets() {
     const publicSets = await FlashcardSet.find({ isPublic: true });
